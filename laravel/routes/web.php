@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// URI '/test' will now access public function 'testController' (defined within the app/http/controllers folder)
+Route::get('/test', 'testController@index');
+// Route::get('/url', 'controllerName@functionName');
+
+Route::get('/test/create', 'testController@create');
+
+Route::get('/test/createGame', 'testController@createGame');
